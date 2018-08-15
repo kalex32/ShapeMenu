@@ -1,26 +1,26 @@
 import java.util.Scanner;
 
 class Block {
-    private double length;
-    private double width;
-    private double height;
+    private double lengthBlock;
+    private double widthBlock;
+    private double heightBlock;
 
-    private Block(double length, double width, double height) {
-        this.length = length;
-        this.width = width;
-        this.height = height;
+    private Block(double lengthBlock, double widthBlock, double heightBlock) {
+        this.lengthBlock = lengthBlock;
+        this.widthBlock = widthBlock;
+        this.heightBlock = heightBlock;
     }
 
-    double getLength() {
-        return length;
+    double getLengthBlock() {
+        return lengthBlock;
     }
 
-    double getWidth() {
-        return width;
+    double getWidthBlock() {
+        return widthBlock;
     }
 
-    double getHeight() {
-        return height;
+    double getHeightBlock() {
+        return heightBlock;
     }
 
     static Object block() {

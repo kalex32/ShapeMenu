@@ -13,6 +13,8 @@ class Menu {
         try {
             switch (scanner.nextInt()) {
                 case 1: Block.block();
+                case 2: Sphera.sphera();
+                case 3: Pyramid.pyramid();
             }
         } catch (ArrayStoreException e){
             menu();
