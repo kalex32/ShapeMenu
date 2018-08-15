@@ -12,10 +12,7 @@ class Menu {
         Scanner scanner = new Scanner(System.in);
         try {
             switch (scanner.nextInt()) {
-                case 1:
-                    // Перенести в отдельный метод в класс Блок
-                    //System.out.println("Введите длину, ширину и высоту блока");
-                    //Block block = new Block(scanner.nextDouble(), scanner.nextDouble(), scanner.nextDouble());
+                case 1: Block.block();
             }
         } catch (ArrayStoreException e){
             menu();
