@@ -1,17 +1,21 @@
 import java.util.Scanner;
 
-class Sphera {
+class Sphera implements Shapes {
     private double radius;
 
     private Sphera(double radius) {
         this.radius = radius;
     }
 
+    Sphera() {
+    }
+
     double getRadius() {
         return radius;
     }
 
-    static Object sphera(){
+    @Override
+    public Object createShapes() {
         System.out.println("Введите радиус сферы");
         Scanner scanner = new Scanner(System.in);
         return new Sphera(scanner.nextDouble());

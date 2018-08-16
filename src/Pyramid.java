@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Pyramid {
+class Pyramid implements Shapes {
     private double lengthPyramid;
     private double widthPyramid;
     private double heightPyramid;
@@ -9,6 +9,9 @@ class Pyramid {
         this.lengthPyramid = lengthPyramid;
         this.widthPyramid = widthPyramid;
         this.heightPyramid = heightPyramid;
+    }
+
+    Pyramid() {
     }
 
     double getLengthPyramid() {
@@ -23,7 +26,8 @@ class Pyramid {
         return heightPyramid;
     }
 
-    static Object pyramid(){
+    @Override
+    public Object createShapes() {
         System.out.println("Введите длину и ширину основания пирамиды, а также высоту");
         Scanner scanner = new Scanner(System.in);
         return new Pyramid(scanner.nextDouble(), scanner.nextDouble(), scanner.nextDouble());

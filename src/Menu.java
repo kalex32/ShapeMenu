@@ -12,16 +12,23 @@ class Menu {
         Scanner scanner = new Scanner(System.in);
         try {
             switch (scanner.nextInt()) {
-                case 1: Block.block();
-                break;
-                case 2: Sphera.sphera();
-                break;
-                case 3: Pyramid.pyramid();
-                break;
+                case 1:
+                    Block block = new Block();
+                    block.createShapes();
+                    break;
+                case 2:
+                    Sphera sphera = new Sphera();
+                    sphera.createShapes();
+                    break;
+                case 3:
+                    Pyramid pyramid = new Pyramid();
+                    pyramid.createShapes();
+                    break;
             }
-        } catch (ArrayStoreException e){
+        } catch (ArrayStoreException e) {
             menu();
         }
+        scanner.close();
 
     }
 }
