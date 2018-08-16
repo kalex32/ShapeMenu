@@ -10,25 +10,24 @@ class Menu {
                 "5. Выход");
 
         Scanner scanner = new Scanner(System.in);
-        try {
-            switch (scanner.nextInt()) {
-                case 1:
-                    Block block = new Block();
-                    block.createShapes();
-                    break;
-                case 2:
-                    Sphera sphera = new Sphera();
-                    sphera.createShapes();
-                    break;
-                case 3:
-                    Pyramid pyramid = new Pyramid();
-                    pyramid.createShapes();
-                    break;
-            }
-        } catch (ArrayStoreException e) {
-            menu();
+        switch (scanner.nextInt()) {
+            case 1:
+                Block block = new Block();
+                block.createShapes();
+                menu();
+                break;
+            case 2:
+                Sphera sphera = new Sphera();
+                sphera.createShapes();
+                break;
+            case 3:
+                Pyramid pyramid = new Pyramid();
+                pyramid.createShapes();
+                break;
         }
         scanner.close();
-
     }
+
 }
+
+
