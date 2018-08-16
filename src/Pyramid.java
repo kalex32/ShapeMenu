@@ -24,7 +24,7 @@ class Pyramid {
     }
 
     static Object pyramid(){
-        System.out.println("Введите длину и шурину основания пирамиды, а также высоту");
+        System.out.println("Введите длину и ширину основания пирамиды, а также высоту");
         Scanner scanner = new Scanner(System.in);
         return new Pyramid(scanner.nextDouble(), scanner.nextDouble(), scanner.nextDouble());
     }
