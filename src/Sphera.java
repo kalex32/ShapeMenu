@@ -15,7 +15,7 @@ class Sphera implements Shapes {
     }
 
     @Override
-    public Object createShapes() {
+    public Shapes createShapes() {
         System.out.println("Введите радиус сферы");
         Scanner scanner = new Scanner(System.in);
         return new Sphera(scanner.nextDouble());

@@ -1,8 +1,10 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 class Menu {
-    ArrayList<Object> arrayListsShapes = new ArrayList<>();
+    ArrayList<Shapes> arrayListsShapes = new ArrayList<>();
+
     void menu() {
         System.out.println("Сделайте выбор:" + "\n" +
                 "1. Введите блок" + "\n" +
@@ -15,19 +17,29 @@ class Menu {
         switch (scanner.nextInt()) {
             case 1:
                 Block block = new Block();
-                arrayListsShapes.add(1, block.createShapes());
+                arrayListsShapes.add(block.createShapes());
                 menu();
-                break;
+                //break;
             case 2:
                 Sphera sphera = new Sphera();
-                sphera.createShapes();
-                break;
+                arrayListsShapes.add(sphera.createShapes());
+                menu();
+                //break;
             case 3:
                 Pyramid pyramid = new Pyramid();
-                pyramid.createShapes();
+                arrayListsShapes.add(pyramid.createShapes());
+                menu();
+                //break;
+            case 4:
+                for (Shapes s : arrayListsShapes) System.out.println(s);
+                System.out.println();
+                menu();
+            case 5:
                 break;
+            default:
+                menu();
+
         }
-        scanner.close();
     }
 
 }

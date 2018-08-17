@@ -1,3 +1,3 @@
 interface Shapes {
-    Object createShapes();
+    Shapes createShapes();
 }

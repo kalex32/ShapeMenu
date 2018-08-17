@@ -27,7 +27,7 @@ class Block implements Shapes {
     }
 
     @Override
-    public Object createShapes() {
+    public Shapes createShapes() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите длину, ширину и высоту блока");
         return new Block(scanner.nextDouble(), scanner.nextDouble(), scanner.nextDouble());

@@ -27,7 +27,7 @@ class Pyramid implements Shapes {
     }
 
     @Override
-    public Object createShapes() {
+    public Shapes createShapes() {
         System.out.println("Введите длину и ширину основания пирамиды, а также высоту");
         Scanner scanner = new Scanner(System.in);
         return new Pyramid(scanner.nextDouble(), scanner.nextDouble(), scanner.nextDouble());
