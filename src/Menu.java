@@ -1,6 +1,8 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 class Menu {
+    ArrayList<Object> arrayListsShapes = new ArrayList<>();
     void menu() {
         System.out.println("Сделайте выбор:" + "\n" +
                 "1. Введите блок" + "\n" +
@@ -13,7 +15,7 @@ class Menu {
         switch (scanner.nextInt()) {
             case 1:
                 Block block = new Block();
-                block.createShapes();
+                arrayListsShapes.add(1, block.createShapes());
                 menu();
                 break;
             case 2:
