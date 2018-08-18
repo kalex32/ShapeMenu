@@ -37,4 +37,9 @@ class Pyramid implements Shapes {
     public double volumeShapes() {
         return (1/3)*getLengthPyramid()*getWidthPyramid()*getHeightPyramid();
     }
+
+    @Override
+    public double areaOfSurfaceShapes() {
+        return 0;
+    }
 }

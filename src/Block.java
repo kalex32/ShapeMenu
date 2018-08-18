@@ -34,7 +34,13 @@ class Block implements Shapes {
     }
 
     @Override
-    public double volumeShapes(){
-        return getLengthBlock()*getWidthBlock()*getLengthBlock();
+    public double volumeShapes() {
+        return getLengthBlock() * getWidthBlock() * getLengthBlock();
+    }
+
+    @Override
+    public double areaOfSurfaceShapes() {
+        return (2 * getLengthBlock() * getWidthBlock()) + (2 * getLengthBlock() * getHeightBlock()) +
+                (2 * getWidthBlock() * getHeightBlock());
     }
 }

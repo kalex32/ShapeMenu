@@ -25,4 +25,9 @@ class Sphera implements Shapes {
     public double volumeShapes() {
         return (4 / 3) * Math.PI * Math.pow(getRadius(), 3);
     }
+
+    @Override
+    public double areaOfSurfaceShapes() {
+        return 4 * Math.PI * Math.pow(getRadius(), 2);
+    }
 }
