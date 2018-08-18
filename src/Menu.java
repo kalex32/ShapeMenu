@@ -3,10 +3,10 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 class Menu {
-    ArrayList<Shapes> arrayListsShapes = new ArrayList<>();
 
-    void menu() {
-        if (arrayListsShapes.size() < 10) {
+    static void menu() {
+        ArrayList<Shapes> arrayListsShapes = new ArrayList<>();
+        //if (arrayListsShapes.size() < 10) {
             System.out.println("Сделайте выбор:" + "\n" +
                     "1. Введите блок" + "\n" +
                     "2. Введите сферу" + "\n" +
@@ -19,29 +19,31 @@ class Menu {
                 case 1:
                     Block block = new Block();
                     arrayListsShapes.add(block.createShapes());
-                    menu();
-                    //break;
+                    //menu();
+                    break;
                 case 2:
                     Sphera sphera = new Sphera();
                     arrayListsShapes.add(sphera.createShapes());
-                    menu();
-                    //break;
+                    //menu();
+                    break;
                 case 3:
                     Pyramid pyramid = new Pyramid();
                     arrayListsShapes.add(pyramid.createShapes());
-                    menu();
-                    //break;
+                    //menu();
+                    break;
                 case 4:
                     for (Shapes s : arrayListsShapes) System.out.println(s);
                     System.out.println();
-                    menu();
+                    //menu();
                 case 5:
                     break;
                 default:
-                    menu();
+                    //menu();
             }
-        }else return;
+        //}else return;
+        VerificationOfAmount.verificationOfAmount(arrayListsShapes);
     }
+
 }
 
 
