@@ -32,4 +32,9 @@ class Block implements Shapes {
         System.out.println("Введите длину, ширину и высоту блока");
         return new Block(scanner.nextDouble(), scanner.nextDouble(), scanner.nextDouble());
     }
+
+    @Override
+    public double volumeShapes(){
+        return getLengthBlock()*getWidthBlock()*getLengthBlock();
+    }
 }

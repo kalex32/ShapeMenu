@@ -32,4 +32,9 @@ class Pyramid implements Shapes {
         Scanner scanner = new Scanner(System.in);
         return new Pyramid(scanner.nextDouble(), scanner.nextDouble(), scanner.nextDouble());
     }
+
+    @Override
+    public double volumeShapes() {
+        return (1/3)*getLengthPyramid()*getWidthPyramid()*getHeightPyramid();
+    }
 }
