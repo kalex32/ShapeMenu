@@ -1,11 +1,10 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 class Menu {
+    private ArrayList<Shapes> arrayListsShapes = new ArrayList<>();
 
-    static void menu() {
-        ArrayList<Shapes> arrayListsShapes = new ArrayList<>();
+    void menu() {
         //if (arrayListsShapes.size() < 10) {
             System.out.println("Сделайте выбор:" + "\n" +
                     "1. Введите блок" + "\n" +
@@ -40,9 +39,10 @@ class Menu {
                 default:
                     //menu();
             }
-        //}else return;
-        VerificationOfAmount.verificationOfAmount(arrayListsShapes);
+
     }
+              new VerificationOfAmount().verificationOfAmount(arrayListsShapes);
+
 
 }
 

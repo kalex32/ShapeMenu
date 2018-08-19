@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Block extends Menu implements Shapes {
+class Block implements Shapes {
     private double lengthBlock;
     private double widthBlock;
     private double heightBlock;
