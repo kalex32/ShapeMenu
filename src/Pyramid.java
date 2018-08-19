@@ -40,9 +40,9 @@ class Pyramid implements Shapes {
 
     @Override
     public double areaOfSurfaceShapes() {
-        return (getLengthPyramid() * getWidthPyramid()) + (2 * (Math.sqrt(Math.pow(getHeightPyramid(), 2) +
-                Math.pow(getLengthPyramid() / 2, 2)) * (getWidthPyramid() / 2))) +
-                (2 * (Math.sqrt(Math.pow(getHeightPyramid(), 2) +
-                Math.pow(getWidthPyramid() / 2, 2)) * (getLengthPyramid() / 2)));
+        return (getLengthPyramid() * getWidthPyramid()) + ((Math.sqrt(Math.pow(getHeightPyramid(), 2) +
+                Math.pow(getLengthPyramid() / 2, 2)) * getWidthPyramid())) +
+                ((Math.sqrt(Math.pow(getHeightPyramid(), 2) +
+                Math.pow(getWidthPyramid() / 2, 2)) * getLengthPyramid()));
     }
 }

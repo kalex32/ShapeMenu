@@ -17,18 +17,18 @@ class Menu {
             Scanner scanner = new Scanner(System.in);
             switch (scanner.nextInt()) {
                 case 1:
-                    Block block = new Block();
-                    arrayListsShapes.add(block.createShapes());
+                    //Block block = new Block();
+                    arrayListsShapes.add(new Block().createShapes());
                     //menu();
                     break;
                 case 2:
-                    Sphera sphera = new Sphera();
-                    arrayListsShapes.add(sphera.createShapes());
+                    //Sphera sphera = new Sphera();
+                    arrayListsShapes.add(new Sphera().createShapes());
                     //menu();
                     break;
                 case 3:
-                    Pyramid pyramid = new Pyramid();
-                    arrayListsShapes.add(pyramid.createShapes());
+                    //Pyramid pyramid = new Pyramid();
+                    arrayListsShapes.add(new Pyramid().createShapes());
                     //menu();
                     break;
                 case 4:
