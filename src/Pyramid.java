@@ -35,11 +35,14 @@ class Pyramid implements Shapes {
 
     @Override
     public double volumeShapes() {
-        return (1/3)*getLengthPyramid()*getWidthPyramid()*getHeightPyramid();
+        return (1 / 3) * getLengthPyramid() * getWidthPyramid() * getHeightPyramid();
     }
 
     @Override
     public double areaOfSurfaceShapes() {
-        return 0;
+        return (getLengthPyramid() * getWidthPyramid()) + (2 * (Math.sqrt(Math.pow(getHeightPyramid(), 2) +
+                Math.pow(getLengthPyramid() / 2, 2)) * (getWidthPyramid() / 2))) +
+                (2 * (Math.sqrt(Math.pow(getHeightPyramid(), 2) +
+                Math.pow(getWidthPyramid() / 2, 2)) * (getLengthPyramid() / 2)));
     }
 }
