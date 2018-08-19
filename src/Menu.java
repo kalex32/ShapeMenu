@@ -4,7 +4,7 @@ import java.util.Scanner;
 class Menu {
     private ArrayList<Shapes> arrayListsShapes = new ArrayList<>();
 
-    void verificationOfAmount(ArrayList arrayListShapes) {
+    private void verificationOfAmount(ArrayList arrayListShapes) {
         while (arrayListShapes.size() < 10) {
             System.out.println("Желаете добавить фигуру?" + "\n" +
                     "1.       Да" + "\n" +
