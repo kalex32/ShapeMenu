@@ -16,13 +16,14 @@ class Menu {
     }
 
     void menu() {
-        //if (arrayListsShapes.size() < 10) {
+
         System.out.println("Сделайте выбор:" + "\n" +
                 "1. Введите блок" + "\n" +
                 "2. Введите сферу" + "\n" +
                 "3. Введите пирамиду" + "\n" +
                 "4. Показать данные" + "\n" +
                 "5. Выход");
+
 
         Scanner scanner = new Scanner(System.in);
         switch (scanner.nextInt()) {
@@ -46,8 +47,8 @@ class Menu {
                 verificationOfAmount(arrayListsShapes);
             case 5:
                 break;
-        }
 
+        }
     }
 }
 

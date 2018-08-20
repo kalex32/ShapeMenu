@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Sphera implements Shapes {
+class Sphera extends Menu implements Shapes {
     private double radius;
 
     private Sphera(double radius) {
