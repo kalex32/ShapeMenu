@@ -1,18 +1,22 @@
 import java.util.Scanner;
 
 class Pyramid implements Shapes {
+    {
+        System.out.println("Введите длину и ширину основания пирамиды, а также высоту");
+    }
+
     private double lengthPyramid;
     private double widthPyramid;
     private double heightPyramid;
 
-    Pyramid(double lengthPyramid, double widthPyramid, double heightPyramid) {
-        this.lengthPyramid = lengthPyramid;
-        this.widthPyramid = widthPyramid;
-        this.heightPyramid = heightPyramid;
-    }
 
     Pyramid() {
+        Scanner scanner = new Scanner(System.in);
+        this.lengthPyramid = scanner.nextDouble();
+        this.widthPyramid = scanner.nextDouble();
+        this.heightPyramid = scanner.nextDouble();
     }
+
 
     double getLengthPyramid() {
         return lengthPyramid;
@@ -26,12 +30,12 @@ class Pyramid implements Shapes {
         return heightPyramid;
     }
 
-    @Override
-    public Shapes createShapes() {
-        System.out.println("Введите длину и ширину основания пирамиды, а также высоту");
-        Scanner scanner = new Scanner(System.in);
-        return new Pyramid(scanner.nextDouble(), scanner.nextDouble(), scanner.nextDouble());
-    }
+//    @Override
+//    public Sphere createShapes() {
+//        System.out.println("Введите длину и ширину основания пирамиды, а также высоту");
+//        Scanner scanner = new Scanner(System.in);
+//        return new Pyramid(scanner.nextDouble(), scanner.nextDouble(), scanner.nextDouble());
+//    }
 
     @Override
     public double volumeShapes() {
@@ -43,6 +47,6 @@ class Pyramid implements Shapes {
         return (getLengthPyramid() * getWidthPyramid()) + ((Math.sqrt(Math.pow(getHeightPyramid(), 2) +
                 Math.pow(getLengthPyramid() / 2, 2)) * getWidthPyramid())) +
                 ((Math.sqrt(Math.pow(getHeightPyramid(), 2) +
-                Math.pow(getWidthPyramid() / 2, 2)) * getLengthPyramid()));
+                        Math.pow(getWidthPyramid() / 2, 2)) * getLengthPyramid()));
     }
 }

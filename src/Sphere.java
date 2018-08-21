@@ -1,25 +1,28 @@
 import java.util.Scanner;
 
 class Sphere implements Shapes {
+    {
+        System.out.println("Введите радиус сферы");
+    }
+
     private double radius;
 
-    private Sphere(double radius) {
-        this.radius = radius;
+    Sphere() {
+        Scanner scanner = new Scanner(System.in);
+        this.radius = scanner.nextDouble();
     }
 
-    Sphere() {
-    }
 
     double getRadius() {
         return radius;
     }
 
-    @Override
-    public Shapes createShapes() {
-        System.out.println("Введите радиус сферы");
-        Scanner scanner = new Scanner(System.in);
-        return new Sphere(scanner.nextDouble());
-    }
+//    @Override
+//    public Sphere createShapes() {
+//        System.out.println("Введите радиус сферы");
+//        Scanner scanner = new Scanner(System.in);
+//        return new Sphere(scanner.nextDouble());
+//    }
 
     @Override
     public double volumeShapes() {

@@ -6,7 +6,6 @@ class Menu {
     private ArrayList<Shapes> arrayListsShapes = new ArrayList<>();
 
 
-
     void menu() {
         for (; ; ) {
             System.out.println("Сделайте выбор:" + "\n" +
@@ -18,30 +17,33 @@ class Menu {
 
 
             Scanner scanner = new Scanner(System.in);
-            switch (scanner.nextInt()) {
-                default:
-                    break;
-                case 1:
-                    //Block block = new Block();
-                    arrayListsShapes.add(new Block().createShapes());
-                    break;
-                case 2:
-                    //Sphera sphera = new Sphera();
-                    arrayListsShapes.add(new Sphere().createShapes());
-                    break;
-                case 3:
-                    //Pyramid pyramid = new Pyramid();
-                    arrayListsShapes.add(new Pyramid().createShapes());
-                    break;
-                case 4:
-                    for (Shapes s : arrayListsShapes) System.out.println(s);
-                    System.out.println();
-                    break;
-                    //VerificationOfAmount.verificationOfAmount(arrayListsShapes);
-                case 5:
-                    System.exit(0);
+//            try {
+                switch (scanner.nextInt()) {
+                    default:
+                        break;
+                    case 1:
+                        Block block = new Block();
+                        arrayListsShapes.add(block);
+                        break;
+                    case 2:
+                        Shapes sphere = new Sphere();
+                        arrayListsShapes.add(sphere);
+                        break;
+                    case 3:
+                        Pyramid pyramid = new Pyramid();
+                        arrayListsShapes.add(pyramid);
+                        break;
+                    case 4:
+                        for (Shapes s : arrayListsShapes) System.out.println(s);
+                        System.out.println();
+                        break;
+                    case 5:
+                        System.exit(0);
 
-            }
+                }
+//            } catch (ArrayStoreException e) {
+//                menu();
+//            }
         }
     }
 }
