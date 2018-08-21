@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
-class Sphera implements Shapes {
+class Sphere implements Shapes {
     private double radius;
 
-    private Sphera(double radius) {
+    private Sphere(double radius) {
         this.radius = radius;
     }
 
-    Sphera() {
+    Sphere() {
     }
 
     double getRadius() {
@@ -18,7 +18,7 @@ class Sphera implements Shapes {
     public Shapes createShapes() {
         System.out.println("Введите радиус сферы");
         Scanner scanner = new Scanner(System.in);
-        return new Sphera(scanner.nextDouble());
+        return new Sphere(scanner.nextDouble());
     }
 
     @Override
