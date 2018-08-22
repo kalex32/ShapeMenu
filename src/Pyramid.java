@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 class Pyramid implements Shapes {
-    {
+    static {
         System.out.println("Введите длину и ширину основания пирамиды, а также высоту");
     }
 
@@ -18,28 +18,22 @@ class Pyramid implements Shapes {
     }
 
 
-    double getLengthPyramid() {
+    private double getLengthPyramid() {
         return lengthPyramid;
     }
 
-    double getWidthPyramid() {
+    private double getWidthPyramid() {
         return widthPyramid;
     }
 
-    double getHeightPyramid() {
+    private double getHeightPyramid() {
         return heightPyramid;
     }
 
-//    @Override
-//    public Sphere createShapes() {
-//        System.out.println("Введите длину и ширину основания пирамиды, а также высоту");
-//        Scanner scanner = new Scanner(System.in);
-//        return new Pyramid(scanner.nextDouble(), scanner.nextDouble(), scanner.nextDouble());
-//    }
 
     @Override
     public double volumeShapes() {
-        return (1 / 3) * getLengthPyramid() * getWidthPyramid() * getHeightPyramid();
+        return 0.333333333333333333 * getLengthPyramid() * getWidthPyramid() * getHeightPyramid();
     }
 
     @Override
@@ -48,5 +42,17 @@ class Pyramid implements Shapes {
                 Math.pow(getLengthPyramid() / 2, 2)) * getWidthPyramid())) +
                 ((Math.sqrt(Math.pow(getHeightPyramid(), 2) +
                         Math.pow(getWidthPyramid() / 2, 2)) * getLengthPyramid()));
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Пирамида (");
+        sb.append("длина основания пирамиды = ").append(lengthPyramid);
+        sb.append(", ширина основания пирамиды=").append(widthPyramid);
+        sb.append(", высота пирамиды=").append(heightPyramid);
+        sb.append(')' + "\n");
+        sb.append("Объем пирамиды = ").append(volumeShapes()).append("\n");
+        sb.append("Площадь поверхности пирамиды = ").append(areaOfSurfaceShapes());
+        return sb.toString();
     }
 }

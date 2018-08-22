@@ -35,8 +35,16 @@ class Menu {
                         arrayListsShapes.add(pyramid);
                         break;
                     case 4:
-                        for (Shapes s : arrayListsShapes) System.out.println(s);
-                        System.out.println();
+                        double v = 0;
+                        double s = 0;
+                        for (Shapes i : arrayListsShapes) {
+                            System.out.println(i.toString());
+                            System.out.println();
+                            v+=i.volumeShapes();
+                            s+=i.areaOfSurfaceShapes();
+                        }
+                        System.out.println("Средний объем всех фигур = "+v/arrayListsShapes.size());
+                        System.out.println("Средняя площадь поверхностей фигур = "+s/arrayListsShapes.size());
                         break;
                     case 5:
                         System.exit(0);

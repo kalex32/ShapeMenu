@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 class Block implements Shapes {
-    {
+    static {
         System.out.println("Введите длину, ширину и высоту блока");
     }
 
@@ -17,24 +17,18 @@ class Block implements Shapes {
         this.heightBlock = scanner.nextDouble();
     }
 
-    double getLengthBlock() {
+    private double getLengthBlock() {
         return lengthBlock;
     }
 
-    double getWidthBlock() {
+    private double getWidthBlock() {
         return widthBlock;
     }
 
-    double getHeightBlock() {
+    private double getHeightBlock() {
         return heightBlock;
     }
 
-//    @Override
-//    public Sphere createShapes() {
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Введите длину, ширину и высоту блока");
-//        return new Block(scanner.nextDouble(), scanner.nextDouble(), scanner.nextDouble());
-//    }
 
     @Override
     public double volumeShapes() {
@@ -45,5 +39,17 @@ class Block implements Shapes {
     public double areaOfSurfaceShapes() {
         return (2 * getLengthBlock() * getWidthBlock()) + (2 * getLengthBlock() * getHeightBlock()) +
                 (2 * getWidthBlock() * getHeightBlock());
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Блок (");
+        sb.append("длина блока = ").append(lengthBlock);
+        sb.append(", ширина блока = ").append(widthBlock);
+        sb.append(", высота блока =").append(heightBlock);
+        sb.append(')' + "\n");
+        sb.append("Объем блока = ").append(volumeShapes()).append("\n");
+        sb.append("Площадь поверхности блока = ").append(areaOfSurfaceShapes());
+        return sb.toString();
     }
 }

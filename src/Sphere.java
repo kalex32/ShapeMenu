@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 class Sphere implements Shapes {
-    {
+    static {
         System.out.println("Введите радиус сферы");
     }
 
@@ -13,24 +13,28 @@ class Sphere implements Shapes {
     }
 
 
-    double getRadius() {
+    private double getRadius() {
         return radius;
     }
 
-//    @Override
-//    public Sphere createShapes() {
-//        System.out.println("Введите радиус сферы");
-//        Scanner scanner = new Scanner(System.in);
-//        return new Sphere(scanner.nextDouble());
-//    }
 
     @Override
     public double volumeShapes() {
-        return (4 / 3) * Math.PI * Math.pow(getRadius(), 3);
+        return 1.333333333333333333333 * Math.PI * Math.pow(getRadius(), 3);
     }
 
     @Override
     public double areaOfSurfaceShapes() {
         return 4 * Math.PI * Math.pow(getRadius(), 2);
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Сфера (");
+        sb.append("радиус = ").append(radius);
+        sb.append(")" + "\n");
+        sb.append("Объем сферы = ").append(volumeShapes()).append("\n");
+        sb.append("Площадь поверхности сферы = ").append(areaOfSurfaceShapes());
+        return sb.toString();
     }
 }
