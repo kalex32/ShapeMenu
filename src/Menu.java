@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
@@ -17,7 +18,7 @@ class Menu {
 
 
             Scanner scanner = new Scanner(System.in);
-//            try {
+            try {
                 switch (scanner.nextInt()) {
                     default:
                         break;
@@ -41,9 +42,9 @@ class Menu {
                         System.exit(0);
 
                 }
-//            } catch (ArrayStoreException e) {
-//                menu();
-//            }
+            } catch (InputMismatchException e) {
+                menu();
+            }
         }
     }
 }
